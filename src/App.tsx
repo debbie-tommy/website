@@ -2,7 +2,7 @@ import { CustomCursor, Navigation, Hero, Skills, Projects, LoadingScreen } from 
 import { useCallback, useState, useEffect } from 'react';
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-tsparticles";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import Experience from './components/Experience';
 
 function App() {

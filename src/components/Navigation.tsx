@@ -2,7 +2,11 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import logoImage from '../assets/logo.png';
 
-const Nav = styled.nav`
+interface NavProps {
+  $scrolled: boolean;  // Note the $ prefix
+}
+
+const Nav = styled.nav<NavProps>`
   padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
@@ -11,8 +15,9 @@ const Nav = styled.nav`
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: var(--transition);
-  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  background: ${props => props.$scrolled ? 'rgba(26, 26, 46, 0.95)' : 'transparent'};
+  backdrop-filter: ${props => props.$scrolled ? 'blur(10px)' : 'none'};
   box-sizing: border-box;
 `;
 
@@ -95,7 +100,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <Nav scrolled={scrolled}>
+    <Nav $scrolled={scrolled}>
       <ScrollProgress style={{ width: `${scrollProgress}%` }} />
       <Logo>
         <img src={logoImage} alt="Logo" />
