@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import dpWorldLogo from '../assets/dpworld.jpeg';
+import ibmLogo from '../assets/ibm.png';
+import offworldLogo from '../assets/owr.png';
+import wiesocLogo from '../assets/wiesoc.png';
+interface TimelineItemProps {
+  $isEven: boolean;
+}
+
+interface TimelineContentProps {
+  $isEven: boolean;
+}
 
 const ExperienceSection = styled.section`
   padding: 4rem 2rem;
@@ -28,7 +39,7 @@ const TimelineContainer = styled.div`
   }
 `;
 
-const TimelineItem = styled(motion.div)`
+const TimelineItem = styled(motion.div)<TimelineItemProps>`
   display: flex;
   margin-bottom: 3rem;
   position: relative;
@@ -40,7 +51,7 @@ const TimelineItem = styled(motion.div)`
   }
 `;
 
-const TimelineContent = styled.div`
+const TimelineContent = styled.div<TimelineContentProps>`
   background: rgba(255, 255, 255, 0.05);
   padding: 1.5rem;
   border-radius: 8px;
@@ -114,14 +125,13 @@ const SubRole = styled.div`
 
 const Experience = () => {
   const experiences = [
-    
     {
       title: "Machine Learning and Cyber Security Intern",
       company: "DP World",
       department: "Group Technology",
       duration: "Dec 2023 - Mar 2024 · 4 months",
       location: "Dubai, United Arab Emirates",
-      logo: "/path-to-dpworld-logo.png"
+      logo: dpWorldLogo
     },
     {
       title: "Client Engineering",
@@ -129,14 +139,13 @@ const Experience = () => {
       duration: "Jan 2023 - Feb 2023 · 2 months",
       location: "Sydney, Australia",
       description: "UNSW Partnership x IBM Client engineering project",
-      logo: "/path-to-ibm-logo.png"
-
+      logo: ibmLogo
     },
     {
-      title: "Offworld Robotics",
-      company: "",
+      company: "Offworld Robotics",
       duration: "2 years 1 month",
-      logo: "/path-to-offworld-logo.png",
+      logo: offworldLogo,
+
       subRoles: [
         {
           title: "Marketing And Public Relations Manager",
@@ -149,10 +158,9 @@ const Experience = () => {
       ]
     },
     {
-      title: "UNSW Women in Engineering Society",
-      company: "",
+      company: "UNSW Women in Engineering Society",
       duration: "3 years 4 months",
-      logo: "/path-to-wiesoc-logo.png",
+      logo: wiesocLogo,
       subRoles: [
         {
           title: "Treasurer",
