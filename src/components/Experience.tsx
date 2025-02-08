@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import  motion  from 'framer-motion';
 import dpWorldLogo from '../assets/dpworld.jpeg';
 import ibmLogo from '../assets/ibm.png';
 import offworldLogo from '../assets/owr.png';
