@@ -81,7 +81,7 @@ const ContactButtons = styled.div`
   margin-top: 3rem;
 `;
 
-const ContactButton = styled.a`
+const ContactButton = styled.a<{ primary?: boolean }>`
   padding: 0.8rem 2rem;
   background: ${props => props.primary ? 
     'linear-gradient(45deg, #00f2fe, #4facfe)' : 
