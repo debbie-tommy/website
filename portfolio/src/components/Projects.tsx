@@ -83,9 +83,18 @@ const Projects = () => {
       title: "LurkforWork",
       description: "A LinkedIn clone: Interacts with a RESTful API backend via fetch and promises. This single-page application (SPA) dynamically updates the DOM to provide an app-like experience without full-page reloads. ",
       tech: ["Vanilla Js", "HTML", "CSS"],
+      Link: "https://www.youtube.com/watch?v=Ndgo2ws34Zk",
       githubLink: "https://github.com/debbie-tommy/lurkaround"
     },
+    {
+      title: "Rubber Ducky- Ethical Hacking Tool",
+      description: "A Rubber Ducky is a USB Rubber Ducky is a USB attack device that plugs into a computer via USB and allows you to send keystrokes to a computer. This project is a simple implementation of a Rubber Ducky using an Arduino.",
+      tech: ["Arduino", "Security Mindset"],
+      Link: "https://www.youtube.com/watch?v=VJvwoObT-0c",
+      githubLink: "https://github.com/debbie-tommy/COMP6441_SomethingAwesome"
+    }
     // Add more projects
+
 
   ];
 
@@ -105,7 +114,7 @@ const Projects = () => {
                 ))}
               </div>
               <div className="links">
-                {/* <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo</a> */}
+                <a href={project.Link} target="_blank" rel="noopener noreferrer">Demo</a>
                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>

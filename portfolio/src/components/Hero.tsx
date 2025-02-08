@@ -185,7 +185,7 @@ const Hero = () => {
           </p>
 
           <p>
-            Tech can be overwhelming—<span className="highlight">imposter syndrome</span>? Been there. But instead of letting it hold me back, I see it as a reason to keep learning, adapting, and improving. The best solutions aren't just efficient—they should be <span className="bold">intuitive, scalable, and actually useful</span>.
+            Tech can be overwhelming—imposter syndrome? Been there. But instead of letting it hold me back, I see it as a <span className="highlight">reason to keep learning, adapting, and improving</span>. The best solutions aren't just efficient—they should be <span className="bold">intuitive, scalable, and actually useful</span>.
           </p>
 
           <p>
