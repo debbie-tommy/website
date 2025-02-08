@@ -1,4 +1,4 @@
-import { CustomCursor, Navigation, Hero, Skills, Projects, LoadingScreen } from './components';
+import { CustomCursor, Navigation, Hero, Skills, Projects, LoadingScreen } from '../src/components';
 import { useCallback, useState, useEffect } from 'react';
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-tsparticles";
