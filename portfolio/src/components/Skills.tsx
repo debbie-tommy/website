@@ -86,7 +86,7 @@ const Skills = () => {
       name: 'Frontend Development', 
       level: 90, 
       icon: '💻',
-      description: 'HTML, CSS, JavaScript, React' 
+      description: 'HTML, CSS, JavaScript' 
     },
     { 
       name: 'Backend Development', 
@@ -95,17 +95,24 @@ const Skills = () => {
       description: 'Node.js, Express, MongoDB' 
     },
     { 
+      name: 'Data Science', 
+      level: 80, 
+      icon: '📊',
+      description: 'Python, Pandas, NumPy, Scikit-learn' 
+    },
+    { 
+      name: 'C/C++ Programming', 
+      level: 85, 
+      icon: '🔧',
+      description: 'Object-Oriented Programming, Data Structures' 
+    },
+    { 
       name: 'React', 
       level: 95, 
       icon: '⚛️',
-      description: 'Redux, Hooks, Context API' 
-    },
-    { 
-      name: 'TypeScript', 
-      level: 88, 
-      icon: '📝',
-      description: 'Types, Interfaces, Generics' 
-    },
+      description: 'Native, Redux, Hooks, Context API' 
+    }
+    
     // Add more skills as needed
   ];
 

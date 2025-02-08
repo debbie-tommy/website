@@ -82,7 +82,6 @@ const Projects = () => {
     {
       title: "LurkforWork",
       description: "A LinkedIn clone: Interacts with a RESTful API backend via fetch and promises. This single-page application (SPA) dynamically updates the DOM to provide an app-like experience without full-page reloads. ",
-      image: "/path-to-image.jpg",
       tech: ["Vanilla Js", "HTML", "CSS"],
       githubLink: "https://github.com/debbie-tommy/lurkaround"
     },
@@ -96,11 +95,7 @@ const Projects = () => {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <ProjectCard key={index}>
-            <img 
-              src={project.image} 
-              alt={project.title} 
-              className="project-image"
-            />
+            
             <div className="content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
