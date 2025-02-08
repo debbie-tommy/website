@@ -13,7 +13,6 @@ const Nav = styled.nav`
   z-index: 1000;
   transition: var(--transition);
   backdrop-filter: blur(10px);
-  background: ${props => props.scrolled ? 'rgba(26, 26, 46, 0.9)' : 'transparent'};
   box-sizing: border-box;
 `;
 
