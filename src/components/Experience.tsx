@@ -4,6 +4,7 @@ import dpWorldLogo from '../assets/dpworld.jpeg';
 import ibmLogo from '../assets/ibm.png';
 import offworldLogo from '../assets/owr.png';
 import wiesocLogo from '../assets/wiesoc.png';
+
 interface TimelineItemProps {
   $isEven: boolean;
 }
