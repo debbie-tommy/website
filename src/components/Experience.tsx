@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import motion from 'framer-motion';
 import dpWorldLogo from '../assets/dpworld.jpeg';
 import ibmLogo from '../assets/ibm.png';
 import offworldLogo from '../assets/owr.png';
@@ -17,6 +17,10 @@ const ExperienceSection = styled.section`
   padding: 4rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const TimelineContainer = styled.div`
@@ -73,6 +77,15 @@ const TimelineContent = styled.div<TimelineContentProps>`
     @media (min-width: 768px) {
       left: ${props => props.$isEven ? '-7px' : 'auto'};
       right: ${props => props.$isEven ? 'auto' : '-7px'};
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 2rem;
+    
+    &::before {
+      left: -2rem;
     }
   }
 `;

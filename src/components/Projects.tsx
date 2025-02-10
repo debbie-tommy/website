@@ -1,9 +1,13 @@
-
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import  motion  from 'framer-motion';
 
 const ProjectsSection = styled.section`
-  padding: 6rem 4rem;
+  padding: 4rem 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+
   max-width: 1400px;
   margin: 0 auto;
   
@@ -18,9 +22,13 @@ const ProjectsSection = styled.section`
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
     margin: 0 auto;
+    
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
   }
 `;
 

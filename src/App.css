@@ -3,10 +3,24 @@
   --accent-color: #00b4d8;
   --text-color: #ffffff;
   --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  
+  /* Add breakpoints */
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
 }
 
+/* Add responsive base styles */
 html {
-  scroll-behavior: smooth;
+  font-size: 16px;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 body {

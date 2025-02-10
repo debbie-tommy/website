@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import  motion  from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 
 const HeroSection = styled.section`
   min-height: 100vh;
-  padding: 6rem 4rem 2rem 4rem;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   max-width: 1400px;
@@ -18,6 +18,22 @@ const HeroSection = styled.section`
     radial-gradient(circle at 25% 25%, rgba(0, 242, 254, 0.05) 1%, transparent 10%),
     radial-gradient(circle at 75% 75%, rgba(79, 172, 254, 0.05) 1%, transparent 10%);
   background-size: 100% 100%, 50px 50px, 50px 50px;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
 `;
 
 const Title = styled.div`

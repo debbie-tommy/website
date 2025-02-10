@@ -7,7 +7,12 @@ interface NavProps {
 }
 
 const Nav = styled.nav<NavProps>`
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,8 +21,8 @@ const Nav = styled.nav<NavProps>`
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  background: ${props => props.$scrolled ? 'rgba(26, 26, 46, 0.95)' : 'transparent'};
-  backdrop-filter: ${props => props.$scrolled ? 'blur(10px)' : 'none'};
+  background: ${(props: NavProps) => props.$scrolled ? 'rgba(26, 26, 46, 0.95)' : 'transparent'};
+  backdrop-filter: ${(props: NavProps) => props.$scrolled ? 'blur(10px)' : 'none'};
   box-sizing: border-box;
 `;
 
@@ -56,6 +61,19 @@ const NavLinks = styled.ul`
   display: flex;
   gap: 2rem;
   list-style: none;
+  
+  @media (max-width: 768px) {
+    display: ${props => props.mobileMenuOpen ? 'flex' : 'none'};
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 46, 0.95);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
   
   li a {
     color: white;
@@ -108,7 +126,7 @@ const Navigation = () => {
       <MobileMenuButton onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
         {mobileMenuOpen ? '✕' : '☰'}
       </MobileMenuButton>
-      <NavLinks className={mobileMenuOpen ? 'active' : ''}>
+      <NavLinks className={mobileMenuOpen ? 'active' : ''} mobileMenuOpen={mobileMenuOpen}>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
