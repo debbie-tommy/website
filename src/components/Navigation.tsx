@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+
 import logoImage from '../assets/logo.png';
 
 interface NavProps {
   $scrolled: boolean;  // Note the $ prefix
+}
+
+interface NavLinksProps {
+  $mobileMenuOpen: boolean;
 }
 
 const Nav = styled.nav<NavProps>`
@@ -57,13 +62,13 @@ const Logo = styled.div`
   }
 `;
 
-const NavLinks = styled.ul`
+const NavLinks = styled.ul<NavLinksProps>`
   display: flex;
   gap: 2rem;
   list-style: none;
   
   @media (max-width: 768px) {
-    display: ${props => props.mobileMenuOpen ? 'flex' : 'none'};
+    display: ${props => props.$mobileMenuOpen ? 'flex' : 'none'};
     flex-direction: column;
     position: fixed;
     top: 70px;
@@ -126,7 +131,7 @@ const Navigation = () => {
       <MobileMenuButton onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
         {mobileMenuOpen ? '✕' : '☰'}
       </MobileMenuButton>
-      <NavLinks className={mobileMenuOpen ? 'active' : ''} mobileMenuOpen={mobileMenuOpen}>
+      <NavLinks className={mobileMenuOpen ? 'active' : ''} $mobileMenuOpen={mobileMenuOpen}>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
